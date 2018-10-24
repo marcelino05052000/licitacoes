@@ -5,15 +5,15 @@ import {User} from "../model/user.model";
 @Injectable()
 export class UserService {
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'http://localhost:8080/user-portal/users';
+  baseUrl: string = 'http://localhost:4200/user-portal/users';
 
   getUsers() {
-    /* let fakeUsers = [{id: 1, firstName: 'Dhiraj', lastName: 'Ray', email: 'dhiraj@gmail.com'},
-     {id: 1, firstName: 'Tom', lastName: 'Jac', email: 'Tom@gmail.com'},
-     {id: 1, firstName: 'Hary', lastName: 'Pan', email: 'hary@gmail.com'},
-     {id: 1, firstName: 'praks', lastName: 'pb', email: 'praks@gmail.com'},
+    /* let licitacoesFake = [{id: 1, objeto: 'x', prazo: '1', orgao: 'asd'},
+     {id: 1, objeto: 'y', prazo: '3', orgao: 'dsa'},
+     {id: 1, objeto: 'z', prazo: '5', orgao: 'das'},
+     {id: 1, objeto: 'a', prazo: '3', orgao: 'sad'},
    ];
-   return Observable.of(fakeUsers).delay(5000);*/
+   return Observable.of(licitacoesFake).delay(5000);*/
     return this.http.get<User[]>(this.baseUrl);
   }
 

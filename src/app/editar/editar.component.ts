@@ -25,9 +25,9 @@ export class EditarComponent implements OnInit {
     }
     this.editForm = this.formBuilder.group({
       id: [],
-      email: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required]
+      orgao: ['', Validators.required],
+      objeto: ['', Validators.required],
+      prazo: ['', Validators.required]
     });
     this.userService.getUserById(+userId)
       .subscribe( data => {

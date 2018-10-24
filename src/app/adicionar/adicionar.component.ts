@@ -19,9 +19,9 @@ export class AdicionarComponent implements OnInit {
 
     this.addForm = this.formBuilder.group({
       id: [],
-      email: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required]
+      orgao: ['', Validators.required],
+      objeto: ['', Validators.required],
+      prazo: ['', Validators.required]
     });
 
   }

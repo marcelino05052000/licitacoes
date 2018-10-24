@@ -12,6 +12,9 @@ import {UserService} from "./service/user.service";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 
+import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     BrowserModule,
     routing,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    ButtonModule
   ],
   providers: [AuthenticationService, UserService],
   bootstrap: [AppComponent]
