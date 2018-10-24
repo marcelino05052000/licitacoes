@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <h2 class="text-center">Adicionar Licitação</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="orgao">Orgão da UASG:</label>
+      <input type="orgao" formControlName="orgao" placeholder="orgao" name="orgao" class="form-control" id="orgao">
+    </div>
+
+    <div class="form-group">
+      <label for="objeto">Objeto:</label>
+      <input formControlName="objeto" placeholder="Objeto" name="objeto" class="form-control" id="objeto">
+    </div>
+
+    <div class="form-group">
+      <label for="prazo">Prazo:</label>
+      <input formControlName="prazo" placeholder="Prazo" name="prazo" class="form-control" id="prazo">
+    </div>
+
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
