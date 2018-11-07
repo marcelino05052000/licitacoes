@@ -15,6 +15,9 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 
+import {AngularFireModule} from "@angular/fire";
+import { config } from 'src/environments/firebase.config';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +32,10 @@ import {ButtonModule} from 'primeng/button';
     ReactiveFormsModule,
     HttpClientModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    AngularFireModule.initializeApp(config)
   ],
-  providers: [AuthenticationService, UserService],
+  providers: [AuthenticationService, UserService, AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

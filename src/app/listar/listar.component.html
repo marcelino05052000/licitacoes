@@ -1,6 +1,6 @@
 <div class="col-md-6">
   <h2> Detalhes</h2>
-  <button class="btn btn-danger" (click)="addUser()"> Adicionar</button>
+  <button pButton type="button" label="Adicionar" (click)="addUser()"></button>
   <p-table [value]="users">
     <ng-template pTemplate="header">
     <tr>
